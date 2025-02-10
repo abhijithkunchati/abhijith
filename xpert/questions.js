@@ -1,17 +1,30 @@
-class CategoryQuiz {
+class QuestionSequences {
     constructor() {
         this.sequences = [];
-        this.currentQuestion = null;
+        this.availableSequences = [];
+        this.usedSequences = [];
+        this.currentSequence = null;
+        this.currentQuestionIndex = 0;
         this.score = 0;
         this.totalAttempts = 0;
+        this.categorySelected = false;
         
         // DOM elements
         this.questionText = document.getElementById('questionText');
-        this.scoreElement = document.getElementById('score');
-        this.totalAttemptsElement = document.getElementById('totalAttempts');
-        this.categoryGrid = document.getElementById('categoryGrid');
+        this.currentQuestionSpan = document.getElementById('currentQuestion');
+        this.totalQuestionsSpan = document.getElementById('totalQuestions');
+        this.categoryText = document.getElementById('categoryText');
+        this.nextBtn = document.getElementById('nextBtn');
+        this.newSequenceBtn = document.getElementById('newSequenceBtn');
+        this.scoreSpan = document.getElementById('score');
+        this.totalAttemptsSpan = document.getElementById('totalAttempts');
+        this.categoryButtons = document.getElementById('categoryButtons');
         
-        // Load data and initialize the game
+        // Event listeners
+        this.nextBtn.addEventListener('click', this.handleNext.bind(this));
+        this.newSequenceBtn.addEventListener('click', this.startNewSequence.bind(this));
+
+        // Load data.txt automatically
         this.loadDataFile();
     }
     
@@ -39,99 +52,131 @@ class CategoryQuiz {
             const text = await response.text();
             this.sequences = text.split('\n')
                 .map(line => this.parseLine(line))
-                .filter(sequence => sequence !== null)
-                .slice(0, 16); // Only take the first 16 categories
+                .filter(sequence => sequence !== null);
             
             if (this.sequences.length === 0) {
                 this.questionText.textContent = 'No valid sequences found in data.txt!';
                 return;
             }
             
-            this.setupCategoryGrid();
+            this.availableSequences = [...this.sequences];
+            this.usedSequences = [];
+            this.startNewSequence();
+            
+            this.nextBtn.disabled = false;
+            this.newSequenceBtn.disabled = false;
         } catch (error) {
             console.error('Error reading file:', error);
             this.questionText.textContent = 'Error loading data.txt file!';
         }
     }
-    
-    setupCategoryGrid() {
-        this.categoryGrid.innerHTML = ''; // Clear existing buttons
-        
-        // Shuffle the sequences to randomize button positions
-        const shuffledSequences = [...this.sequences].sort(() => Math.random() - 0.5);
-        
-        shuffledSequences.forEach((sequence, index) => {
+
+    getAllCategories() {
+        return [...new Set(this.sequences.map(seq => seq[0]))];
+    }
+
+    createCategoryButtons() {
+        this.categoryButtons.innerHTML = '';
+        const categories = this.getAllCategories();
+        categories.forEach(category => {
             const button = document.createElement('button');
+            button.textContent = category;
             button.className = 'category-button';
-            button.textContent = '?';
-            button.dataset.category = sequence[0];
-            button.dataset.index = index;
-            
-            button.addEventListener('click', () => this.handleCategoryClick(button, sequence));
-            this.categoryGrid.appendChild(button);
+            button.addEventListener('click', () => this.handleCategorySelect(category));
+            this.categoryButtons.appendChild(button);
         });
     }
-    
-    handleCategoryClick(button, sequence) {
-        if (button.classList.contains('disabled')) return;
+
+    handleCategorySelect(selectedCategory) {
+        if (this.categorySelected) return;
         
-        const isCorrect = sequence[0] === this.currentQuestion?.[0];
-        button.textContent = sequence[0]; // Reveal the category
+        this.categorySelected = true;
+        const correctCategory = this.currentSequence[0];
+        const isCorrect = selectedCategory === correctCategory;
         
-        if (!this.currentQuestion) {
-            // First click - set the current question
-            this.currentQuestion = sequence;
-            const randomQuestionIndex = Math.floor(Math.random() * sequence[1].length);
-            this.questionText.textContent = sequence[1][randomQuestionIndex];
-            button.classList.add('disabled');
-        } else {
-            // Subsequent clicks - check if the answer is correct
-            this.totalAttempts++;
-            if (isCorrect) {
-                this.score++;
-                button.classList.add('correct');
-            } else {
-                button.classList.add('incorrect');
+        // Update score
+        this.totalAttempts++;
+        if (isCorrect) this.score++;
+        
+        // Update UI
+        this.scoreSpan.textContent = this.score;
+        this.totalAttemptsSpan.textContent = this.totalAttempts;
+        
+        // Show visual feedback
+        const buttons = this.categoryButtons.getElementsByClassName('category-button');
+        Array.from(buttons).forEach(button => {
+            if (button.textContent === selectedCategory) {
+                button.classList.add(isCorrect ? 'correct' : 'incorrect');
             }
-            
-            // Update score
-            this.scoreElement.textContent = this.score;
-            this.totalAttemptsElement.textContent = this.totalAttempts;
-            
-            // Reset for next question
-            setTimeout(() => {
-                // Find a new random sequence that hasn't been used
-                const availableButtons = Array.from(document.querySelectorAll('.category-button:not(.disabled)'));
-                if (availableButtons.length > 0) {
-                    const randomButton = availableButtons[Math.floor(Math.random() * availableButtons.length)];
-                    const sequenceIndex = parseInt(randomButton.dataset.index);
-                    this.currentQuestion = this.sequences[sequenceIndex];
-                    const randomQuestionIndex = Math.floor(Math.random() * this.currentQuestion[1].length);
-                    this.questionText.textContent = this.currentQuestion[1][randomQuestionIndex];
-                    randomButton.classList.add('disabled');
-                } else {
-                    // Game over
-                    this.questionText.textContent = `Game Over! Final Score: ${this.score}/${this.totalAttempts}`;
-                    setTimeout(() => {
-                        if (confirm('Play again?')) {
-                            this.resetGame();
-                        }
-                    }, 1500);
-                }
-            }, 1000);
+            if (!isCorrect && button.textContent === correctCategory) {
+                button.classList.add('correct');
+            }
+            button.disabled = true;
+        });
+        
+        // Show correct category
+        this.categoryText.parentElement.style.display = 'block';
+        this.categoryText.textContent = correctCategory;
+    }
+    
+    startNewSequence() {
+        if (this.availableSequences.length === 0) {
+            this.availableSequences = [...this.usedSequences];
+            this.usedSequences = [];
+            alert('All categories completed! Starting new cycle...');
+        }
+
+        // If category wasn't selected in previous sequence, count it as wrong
+        if (this.currentSequence && !this.categorySelected) {
+            this.totalAttempts++;
+            this.scoreSpan.textContent = this.score;
+            this.totalAttemptsSpan.textContent = this.totalAttempts;
+        }
+        
+        const randomIndex = Math.floor(Math.random() * this.availableSequences.length);
+        this.currentSequence = this.availableSequences[randomIndex];
+        this.currentQuestionIndex = 0;
+        this.categorySelected = false;
+        
+        // Move sequence from available to used
+        this.usedSequences.push(this.currentSequence);
+        this.availableSequences.splice(randomIndex, 1);
+        
+        this.updateDisplay();
+    }
+    
+    handleNext() {
+        if (!this.currentSequence) return;
+
+        // If category wasn't selected, count it as wrong
+        if (!this.categorySelected) {
+            this.totalAttempts++;
+            this.scoreSpan.textContent = this.score;
+            this.totalAttemptsSpan.textContent = this.totalAttempts;
+        }
+        
+        this.currentQuestionIndex++;
+        if (this.currentQuestionIndex >= this.currentSequence[1].length) {
+            this.startNewSequence();
+        } else {
+            this.updateDisplay();
         }
     }
     
-    resetGame() {
-        this.score = 0;
-        this.totalAttempts = 0;
-        this.currentQuestion = null;
-        this.scoreElement.textContent = '0';
-        this.totalAttemptsElement.textContent = '0';
-        this.questionText.textContent = 'Select a category to start!';
-        this.setupCategoryGrid();
+    updateDisplay() {
+        if (!this.currentSequence) return;
+        
+        const [category, questions] = this.currentSequence;
+        this.questionText.textContent = questions[this.currentQuestionIndex];
+        this.currentQuestionSpan.textContent = this.currentQuestionIndex + 1;
+        this.totalQuestionsSpan.textContent = questions.length;
+        
+        // Reset category selection UI
+        this.categorySelected = false;
+        this.categoryText.parentElement.style.display = 'none';
+        this.createCategoryButtons();
     }
 }
 
 // Initialize the application
-const app = new CategoryQuiz();
+const app = new QuestionSequences();

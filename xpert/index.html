@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Quiz</title>
+    <title>Question Sequences</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,57 +18,12 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .score-display {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-radius: 4px;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .category-button {
-            padding: 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .category-button:hover {
-            background-color: #0056b3;
-            transform: scale(1.02);
-        }
-        .category-button.correct {
-            background-color: #28a745;
-        }
-        .category-button.incorrect {
-            background-color: #dc3545;
-        }
-        .category-button.disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
         .question-display {
             margin: 20px 0;
             padding: 20px;
             background-color: #f8f9fa;
             border-radius: 4px;
             min-height: 100px;
-            text-align: center;
-            font-size: 18px;
         }
         .controls {
             display: flex;
@@ -98,33 +53,57 @@
             color: #666;
             font-style: italic;
         }
+        .category-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .category-button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: white;
+            transition: all 0.3s;
+        }
+        .category-button:hover {
+            background-color: #f0f0f0;
+        }
+        .category-button.correct {
+            background-color: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+        .category-button.incorrect {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 style="text-align: center;">Category Quiz</h1>
+        <h1>Question Sequences</h1>
         
-        <div class="score-display">
-            Score: <span id="score">0</span> / <span id="totalAttempts">0</span>
+        <div class="progress">
+            Score: <span id="score">0</span> / <span id="totalAttempts">0</span><br>
+            Question <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span>
         </div>
         
         <div class="question-display">
-            <p id="questionText">Select a category to start!</p>
+            <p id="questionText">Loading questions...</p>
         </div>
         
-        <p class="category">Category: <span id="categoryText">-</span></p>
-        
-        <div class="grid-container" id="categoryGrid">
+        <div id="categoryButtons" class="category-buttons">
             <!-- Category buttons will be added here dynamically -->
         </div>
+
+        <p class="category" style="display: none;">Category: <span id="categoryText">-</span></p>
         
         <div class="controls">
             <button id="nextBtn" disabled>Next Question</button>
             <button id="newSequenceBtn" disabled>New Sequence</button>
-        </div>
-        
-        <div class="progress">
-            Question <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span>
         </div>
     </div>
 
