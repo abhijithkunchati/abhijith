@@ -115,7 +115,6 @@ class QuestionSequences {
         });
         
         // Show correct category
-        this.categoryText.parentElement.style.display = 'block';
         this.categoryText.textContent = correctCategory;
     }
     
@@ -136,7 +135,7 @@ class QuestionSequences {
         const randomIndex = Math.floor(Math.random() * this.availableSequences.length);
         this.currentSequence = this.availableSequences[randomIndex];
         this.currentQuestionIndex = 0;
-        this.categorySelected = false;
+        this.categorySelected = this.currentQuestionIndex > 0; // Only allow category selection for first question
         
         // Move sequence from available to used
         this.usedSequences.push(this.currentSequence);
@@ -148,8 +147,8 @@ class QuestionSequences {
     handleNext() {
         if (!this.currentSequence) return;
 
-        // If category wasn't selected, count it as wrong
-        if (!this.categorySelected) {
+        // If category wasn't selected on first question, count it as wrong
+        if (this.currentQuestionIndex === 0 && !this.categorySelected) {
             this.totalAttempts++;
             this.scoreSpan.textContent = this.score;
             this.totalAttemptsSpan.textContent = this.totalAttempts;
@@ -171,9 +170,16 @@ class QuestionSequences {
         this.currentQuestionSpan.textContent = this.currentQuestionIndex + 1;
         this.totalQuestionsSpan.textContent = questions.length;
         
-        // Reset category selection UI
-        this.categorySelected = false;
-        this.createCategoryButtons();
+        // Show category buttons only for the first question in a sequence
+        if (this.currentQuestionIndex === 0) {
+            this.categorySelected = false;
+            this.createCategoryButtons();
+            this.categoryText.textContent = '-';
+        } else {
+            this.categoryButtons.innerHTML = '';
+            this.categorySelected = true;
+            this.categoryText.textContent = category;
+        }
     }
 }
 
