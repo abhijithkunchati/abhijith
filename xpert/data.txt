@@ -1,20 +1,18 @@
-Backbone: "Tell me about a time when you strongly disagreed with your manager or peer on something you considered very important to the business?" "What was it and how did you handle it?" "Knowing what you know now, would you do anything differently?"
+DisagreeAndCommit: "Tell me about a time when you strongly disagreed with your manager or peer on something you considered very important to the business?" "What was it and how did you handle it?" "Knowing what you know now, would you do anything differently?"
 
-Backbone: "Describe a time when you took an unpopular stance in a meeting with peers and your leader?" "What was it?" "Why did you feel strongly about it?" "What did you do?" "What was the outcome?"
+DisagreeAndCommit: "Describe a time when you took an unpopular stance in a meeting with peers and your leader?" "What was it?" "Why did you feel strongly about it?" "What did you do?" "What was the outcome?"
 
-Backbone: "Often, we must make decisions as a group. Give me an example of a time you committed to a group decision even though you disagreed?" "What factors led you to commit to the decision?" "Would you make the same decision now?"
+DisagreeAndCommit: "Often, we must make decisions as a group. Give me an example of a time you committed to a group decision even though you disagreed?" "What factors led you to commit to the decision?" "Would you make the same decision now?"
 
-Backbone: "Describe a time when you felt really strongly about something on a project but the team decided to go in a different direction?" "How hard did you press the issue?" "How did you approach that project afterward?"
+DisagreeAndCommit: "Describe a time when you felt really strongly about something on a project but the team decided to go in a different direction?" "How hard did you press the issue?" "How did you approach that project afterward?"
 
-Backbone: "Tell me about a time when you pushed back against a decision that negatively impacted your team?" "What was the issue?" "How did it turn out?" "Would you have done anything differently?"
+DisagreeAndCommit: "Tell me about a time when you pushed back against a decision that negatively impacted your team?" "What was the issue?" "How did it turn out?" "Would you have done anything differently?"
 
-Backbone: "Give me an example of when you submitted a great idea to your manager and they did not support it?" "What was the idea?" "How did you handle the lack of support?"
+DisagreeAndCommit: "Give me an example of when you submitted a great idea to your manager and they did not support it?" "What was the idea?" "How did you handle the lack of support?"
 
-Backbone: "Describe a time when you had to support a business initiative that you didn't agree with?" "How did you handle it?" "How did you deliver the message to your team?"
+DisagreeAndCommit: "Describe a time when you had to support a business initiative that you didn't agree with?" "How did you handle it?" "How did you deliver the message to your team?"
 
-Backbone: "Tell me about a time when the business gained something because you persisted for a length of time?" "Why were you so determined?" "How did it turn out?"
-
-Backbone: "Give me an example of a time when you were inclusive and respectful of the perspectives of others although they had an opinion which was different than yours?" "How did you support your position?"
+DisagreeAndCommit: "Tell me about a time when the business gained something because you persisted for a length of time?" "Why were you so determined?" "How did it turn out?"
 
 BiasForAction: "Give me an example of a calculated risk that you have taken where speed was critical?" "What was the situation and how did you handle it?" "What steps did you take to mitigate the risk?" "What was the outcome?" "Knowing what you know now, would you have done anything differently?"
 
@@ -29,10 +27,6 @@ BiasForAction: "Give me an example of when you had to make an important decision
 BiasForAction: "Tell me about a time when you saw an issue that would impact your team and took a proactive approach to solve it?" "What was the issue?" "What did you do and what was the outcome?" "What did you learn from this situation?"
 
 BiasForAction: "Tell me about a time when you had to make a decision quickly but needed to gather diverse perspectives from those on your team?"
-
-BiasForAction: "Tell me about a time when you felt your team was not moving to action quickly enough?" "What was the situation?" "What did you do?" "What was the outcome?" "Would you have done anything differently?"
-
-BiasForAction: "Tell me about a time when you were able to remove a serious roadblock/barrier preventing your team from making progress?" "What was the barrier?" "How were you able to remove it?" "What was the outcome?" "Knowing what you know now, would you have done anything differently?"
 
 CustomerObsession: "Describe a difficult interaction you had with a customer?" "How did you deal with it?" "What was the outcome?" "How would you handle it differently?"
 
@@ -68,8 +62,6 @@ DeliverResults: "Tell me about a time when you did not effectively manage your p
 
 DeliverResults: "How have you delivered quality service for customers with diverse needs?" "What obstacles did you encounter and how did you overcome them?" "How did you audit customer experience?"
 
-DeliverResults: "It can be difficult to set goals for a team that are challenging, yet achievable. Tell me about a time when you hit the right balance?" "How did you approach setting the goals?" "What was the outcome?"
-
 DiveDeep: "Tell me about a time when you were trying to understand a complex problem on your team and you had to dig into the details to figure it out?" "Who did you talk with or where did you have to look to find the most valuable information?" "How did you use that information to help solve the problem?"
 
 DiveDeep: "Tell me about a situation that required you to dig deep to get to the root cause?" "How did you know you were focusing on the right things?" "What was the outcome?" "Would you have done anything differently?"
@@ -81,10 +73,6 @@ DiveDeep: "Walk me through a big problem or issue in your organization that you 
 DiveDeep: "Tell me about a specific metric you have used to identify a need for a change in your department?" "Did you create the metric or was it already available?" "How did this and other information influence the change?" "What was the outcome of this change?"
 
 DiveDeep: "Have you ever created a metric that helped identify a need for a change in your department?" "What was the metric?" "Why did you create it?" "How did this and other information influence change?" "What was the outcome of the change?"
-
-DiveDeep: "Tell me about a time when you had to validate the assumptions underlying a direct report's project?" "How did you decide follow up was necessary?" "What steps, if any, did you take to validate the assumptions?" "What was the result?"
-
-DiveDeep: "Tell me about a time when you sought diverse perspectives to evaluate the assumptions underlying a direct report's project?" "How did you ensure that you were being inclusive in your review?"
 
 EarnTrust: "Tell me about a time when you had to communicate a change in direction that you anticipated people would have concerns with?" "What did you do to understand the concerns and mitigate them?" "Were there any changes you made along the way after hearing these concerns?" "How did you handle questions and/or resistance?" "Were you able to get people comfortable with the change?"
 
@@ -114,12 +102,6 @@ Frugality: "Tell me about a time when you had to make tradeoffs between quality 
 
 Frugality: "Tell me about a time when you generated a creative solution to a problem or project without requiring additional resources?" "What was the problem?" "What was the solution and how did you come up with it?" "What was the outcome?"
 
-Frugality: "Give an example of a time you requested additional funding/budget to complete a project?" "Why was it needed?" "Did you try to figure out another approach?" "Did you get the additional resources?" "Why or why not?"
-
-Frugality: "Describe a time when you had to decide whether or not to award or ask for additional resources?" "What criteria do you use for making the call?" "What was the outcome?" "Knowing what you know now, would you have done anything differently?"
-
-Frugality: "Give an example of a time when you challenged your team to come up with a more efficient solution or process?" "What drove the request?" "How did you help?" "What were some of your biggest challenges?" "What were the end results?"
-
 HireAndDevelop: "Tell me about a time when you helped one of your team members develop their career?" "How did you help that team member?" "What was the result?"
 
 HireAndDevelop: "Tell me about a time when you invested in an employee's development?" "What did you invest in and why?" "What was the outcome?" "Can you share an example where investing in an employee's development didn't work out?"
@@ -127,20 +109,6 @@ HireAndDevelop: "Tell me about a time when you invested in an employee's develop
 HireAndDevelop: "Give me an example of a time you provided feedback to develop the strengths of someone on your team?" "Were you able to positively impact their performance?"
 
 HireAndDevelop: "Tell me about a time when you provided coaching for a team member?" "What started the coaching?" "What was the outcome?"
-
-HireAndDevelop: "Tell me about someone you hired that you thought complemented your skills?" "How did you coach an individual in areas where you have a weakness?"
-
-HireAndDevelop: "Tell me about a time when you helped a remote team member develop their career?" "Can you give me an example of a specific team member and how you helped them develop across the geographic distance?"
-
-HireAndDevelop: "Describe a person who struggled to get promoted under your leadership and how you helped facilitate their success?"
-
-HireAndDevelop: "Tell me about your most challenging talent review and promotion process that you conducted for your team?" "What made it challenging?" "What factors did you consider in your talent review?" "What factors did you consider in the promotion process?" "Did you incorporate a tool to counter unconscious bias?" "If yes, how?" "How do you manage perceptions of unfair treatment?" "What did you learn from this process?" "Knowing what you know now, would you have done anything different?"
-
-HireAndDevelop: "Describe a time when you constructed a team to accomplish a goal?" "What factors did you consider in constructing the team?" "Did you factor diversity into your team construction?" "How did you balance work requirements, team skill composition, and team stretch opportunities?" "What do you consider when you allocate work?" "How did you ensure team members were able to work effectively together?" "Would you have done anything differently?"
-
-HireAndDevelop: "Tell me about a time when you had a low performing individual on your team?" "How did you deliver feedback?" "Did their performance improve?"
-
-HireAndDevelop: "How have you considered diversity, equity and inclusion as you are building and growing teams?" "Who did you seek input from and why?"
 
 InventAndSimplify: "Give me an example of a complex problem you solved with a simple solution?" "What made the problem complex?" "How do you know your solution addressed the problem?"
 
@@ -153,10 +121,6 @@ InventAndSimplify: "Describe a time when you influenced and drove new thinking a
 InventAndSimplify: "Tell me about a time when you had a challenging problem or situation that the usual approach wouldn't address?" "How did you select an alternative approach?" "What alternative approach(es) did you consider?" "What was the end result?" "What was the impact?"
 
 InventAndSimplify: "Tell me about a novel idea you had or decision you made that had a big impact on your business?" "What was novel about it?"
-
-InventAndSimplify: "Tell me about a time when you identified a simple change on your team to make the culture more inclusive?" "What problem were you trying to solve?" "What was the outcome?"
-
-InventAndSimplify: "Tell me about a time when you enabled your team/a team member to implement a significant change or improvement?" "What problem were you trying to solve?" "How did you measure success?" "What was the end result/impact?"
 
 LearnAndBeCurious: "Tell me about a time when you realized you needed a deeper level of subject matter expertise to do your job well?" "What did you do about it?" "What was the outcome?" "Is there anything you would have done differently?"
 
@@ -171,8 +135,6 @@ LearnAndBeCurious: "Give me an example of a time when you explored a new or unex
 LearnAndBeCurious: "Describe a time when someone on your team challenged you to think differently about a problem?" "What was the situation?" "How did you respond?" "What was the outcome?"
 
 LearnAndBeCurious: "Tell me about a time when you used external trends to improve your own company's products or services?" "How did you keep up to date with external trends?" "How did you decide to apply them to your own company?" "What was the result?"
-
-LearnAndBeCurious: "Give me an example of a time when you were intentional about learning different cultures or identities?" "How has this led to a better customer or workplace experience?"
 
 Ownership: "Tell me about a time when you took on something significant outside your area of responsibility?" "Why was it important?" "What was the outcome?"
 
@@ -198,19 +160,11 @@ ThinkBig: "Give me an example of an idea or vision you had which was adopted by 
 
 ThinkBig: "Tell me about a time when you thought differently to improve a process that was working?" "What assumptions did you have to question?" "How did you evaluate if the change improved the process?" "Knowing what you know now, would you do anything differently?"
 
-ThinkBig: "How have you communicated a vision to ensure that your product/service/process provided accessibility for all?" "Who did you seek input from and why?"
-
-ThinkBig: "Tell me about a time when you encouraged a team member or organization to take a big risk?" "How did you balance the risk against existing business goals?" "What was the outcome?" "What did you learn from this situation?"
-
-ThinkBig: "Tell me about a time when you established a vision for a team, product, initiative when there wasn't one?" "How did you gain buy-in and drive execution?" "What was the outcome?" "Would you have done anything differently?"
-
 BestEmployer: "Tell me a time when you helped build a more inclusive working environment?" "What problems were you trying to address?" "What did you do?" "What were the employees' reactions?" "How did the changes help the employees?"
 
 BestEmployer: "Tell me about a time when you advocated for someone who had less influence or seniority than you?" "How or why did you advocate for them and what was the outcome?"
 
 BestEmployer: "Describe a time when you implemented a change at work aimed at improving the work experience of yourself or coworkers?" "What was the goal?" "Why did you feel this change was necessary?" "What was the outcome?"
-
-BestEmployer: "Describe a time when you promoted diversity, equity, or inclusion in the workplace?" "What forms of diversity did you consider?" "What approach did you use?"
 
 BestEmployer: "Tell me about a time when you showed compassion toward someone during a stressful or high-pressure situation?" "How did you recognize that it was important to demonstrate sensitivity?" "What did you do to demonstrate compassion?" "What were the outcomes for that person and the situation?"
 
@@ -220,17 +174,9 @@ BestEmployer: "Give me an example of a time when you organized or participated i
 
 BestEmployer: "Tell me about a time when you noticed someone was being excluded or treated unfairly?" "Were you able to do anything to help?"
 
-BestEmployer: "Tell me about a time you created an environment where your direct reports felt comfortable speaking up with questions, concerns, ideas, or mistakes?" "How did you do this and how do you know that it worked?"
-
-BestEmployer: "Give me an example of when you worked to improve your team's work environment?" "Why did you think the improvement was needed?" "How did you decide what steps to take?" "What impact did this improvement have on your team?"
-
-BestEmployer: "Tell me about a time you influenced a change that fostered diversity, equity, and inclusion on your team or in your org?" "What indicators did you use to identify the problem?" "What measures did you employ to course correct the issue?"
-
 Responsibility: "Tell me about a time you worked on a project that had impact beyond your immediate client/customer/organization?" "How did you approach the potential downstream impact of this work?" "When in the course of the project did you start thinking about this impact, and what efforts did you make to manage this impact?" "What were the risks?"
 
 Responsibility: "Tell me about a time when you decided to change a decision because of unintended consequences for your customers?" "What was the impact to your customers?" "What tradeoffs did you have to make?" "How did your new solution better serve your customers?"
-
-Responsibility: "Tell me about a time when you changed course because of the negative impact you were going to cause to a third-party?"
 
 Responsibility: "Tell me a time when you thought carefully about social responsibility as a critical aspect of your decision making?" "Why was social responsibility important?" "How did it have impact on the decision-making process?"
 
@@ -242,4 +188,28 @@ Responsibility: "Tell me about a time where you realized a project you were work
 
 Responsibility: "Tell me about a time you left something better than how you found it?" "What was it and how did you change or impact it?" "How did your actions influence things for the better?"
 
-Responsibility: "Tell me about a time you influenced an organizational change to bring new social awareness and responsibility among the teams?" "What activities or exercises did you employ to promote this awareness?" "What was the outcome from these efforts?"
+DecisionMaking: "Tell me about a time when you didn't have enough data to make the right decision?" "What did you do?" "What path did you take?" "Did the decision turn out to be the correct one?"
+
+DecisionMaking: "Tell me about a strategic decision you had to make without clear data or benchmarks?" "How did you make your final decision?" "What alternatives did you consider?" "What were the tradeoffs of each?" "How did you mitigate risk?"
+
+DecisionMaking: "Tell me about a time when you made a difficult decision with input from many different sources (customers, stakeholders, partner teams, and so on)?" "What was the situation and how did you arrive at your decision?" "Did the decision turn out to be the correct one?" "Why or why not?"
+
+DecisionMaking: "We don't always make the right decision all the time. Tell me about a time when you made a bad decision?" "What was the impact of that decision?" "What did you learn?" "How have you applied what you learned?"
+
+DecisionMaking: "We don't always make the right judgment all the time. Tell me about a time when you made an error in judgment?" "What was the impact?" "What did you learn?" "How have you applied what you learned?"
+
+DecisionMaking: "Tell me about a time when you discovered that your idea was not the best course of action?" "What was your idea?" "Why wasn't your idea the best course of action?" "How did you find out it was not the correct path?" "What was the best course of action?" "Who provided it?" "What did you learn from the experience?"
+
+DecisionMaking: "Describe a time when you brought different perspectives together to solve a problem?" "What types of different perspectives were represented?" "How did you seek out different points of view?" "What was the outcome?" "Were there any key learnings from this experience?" "Knowing what you know now, would you have done anything different?"
+
+Standards: "Describe a time when you refused to compromise your standards around quality/customer service, and so on?" "Who was your customer?" "What was the result?"
+
+Standards: "Tell me about a time when you were unsatisfied with the way things were in your team or organization?" "What did you do to change it, if anything?" "What was the impact?" "Would you do anything differently in the future?"
+
+Standards: "Tell me about a time when you worked to improve the quality of a product/service/solution that was already getting good customer feedback?" "Why did you think it needed improvement?" "How did customers react?"
+
+Standards: "Tell me about a time when you had to make a decision between standards and delivery?" "What tradeoffs did you have make?" "What was the outcome?" "Knowing what you know now, would you have done anything differently?"
+
+Standards: "Give me an example of a goal you've had where you wish you had done better?" "What was the goal?" "How could you have improved on it?"
+
+Standards: "Describe the most significant continuous improvement project that you led?" "What was the catalyst to this change and how did you go about it?" "What was the outcome?"
