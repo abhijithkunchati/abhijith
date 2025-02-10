@@ -173,7 +173,6 @@ class QuestionSequences {
         
         // Reset category selection UI
         this.categorySelected = false;
-        this.categoryText.parentElement.style.display = 'none';
         this.createCategoryButtons();
     }
 }
