@@ -188,19 +188,19 @@ Responsibility: "Tell me about a time where you realized a project you were work
 
 Responsibility: "Tell me about a time you left something better than how you found it?" "What was it and how did you change or impact it?" "How did your actions influence things for the better?"
 
-DecisionMaking: "Tell me about a time when you didn't have enough data to make the right decision?" "What did you do?" "What path did you take?" "Did the decision turn out to be the correct one?"
+AreRightALot: "Tell me about a time when you didn't have enough data to make the right decision?" "What did you do?" "What path did you take?" "Did the decision turn out to be the correct one?"
 
-DecisionMaking: "Tell me about a strategic decision you had to make without clear data or benchmarks?" "How did you make your final decision?" "What alternatives did you consider?" "What were the tradeoffs of each?" "How did you mitigate risk?"
+AreRightALot: "Tell me about a strategic decision you had to make without clear data or benchmarks?" "How did you make your final decision?" "What alternatives did you consider?" "What were the tradeoffs of each?" "How did you mitigate risk?"
 
-DecisionMaking: "Tell me about a time when you made a difficult decision with input from many different sources (customers, stakeholders, partner teams, and so on)?" "What was the situation and how did you arrive at your decision?" "Did the decision turn out to be the correct one?" "Why or why not?"
+AreRightALot: "Tell me about a time when you made a difficult decision with input from many different sources (customers, stakeholders, partner teams, and so on)?" "What was the situation and how did you arrive at your decision?" "Did the decision turn out to be the correct one?" "Why or why not?"
 
-DecisionMaking: "We don't always make the right decision all the time. Tell me about a time when you made a bad decision?" "What was the impact of that decision?" "What did you learn?" "How have you applied what you learned?"
+AreRightALot: "We don't always make the right decision all the time. Tell me about a time when you made a bad decision?" "What was the impact of that decision?" "What did you learn?" "How have you applied what you learned?"
 
-DecisionMaking: "We don't always make the right judgment all the time. Tell me about a time when you made an error in judgment?" "What was the impact?" "What did you learn?" "How have you applied what you learned?"
+AreRightALot: "We don't always make the right judgment all the time. Tell me about a time when you made an error in judgment?" "What was the impact?" "What did you learn?" "How have you applied what you learned?"
 
-DecisionMaking: "Tell me about a time when you discovered that your idea was not the best course of action?" "What was your idea?" "Why wasn't your idea the best course of action?" "How did you find out it was not the correct path?" "What was the best course of action?" "Who provided it?" "What did you learn from the experience?"
+AreRightALot: "Tell me about a time when you discovered that your idea was not the best course of action?" "What was your idea?" "Why wasn't your idea the best course of action?" "How did you find out it was not the correct path?" "What was the best course of action?" "Who provided it?" "What did you learn from the experience?"
 
-DecisionMaking: "Describe a time when you brought different perspectives together to solve a problem?" "What types of different perspectives were represented?" "How did you seek out different points of view?" "What was the outcome?" "Were there any key learnings from this experience?" "Knowing what you know now, would you have done anything different?"
+AreRightALot: "Describe a time when you brought different perspectives together to solve a problem?" "What types of different perspectives were represented?" "How did you seek out different points of view?" "What was the outcome?" "Were there any key learnings from this experience?" "Knowing what you know now, would you have done anything different?"
 
 Standards: "Describe a time when you refused to compromise your standards around quality/customer service, and so on?" "Who was your customer?" "What was the result?"
 
