@@ -7,7 +7,6 @@ class QuestionSequences {
         this.currentQuestionIndex = 0;
         
         // DOM elements
-        this.fileInput = document.getElementById('fileInput');
         this.questionText = document.getElementById('questionText');
         this.currentQuestionSpan = document.getElementById('currentQuestion');
         this.totalQuestionsSpan = document.getElementById('totalQuestions');
@@ -16,9 +15,11 @@ class QuestionSequences {
         this.newSequenceBtn = document.getElementById('newSequenceBtn');
         
         // Event listeners
-        this.fileInput.addEventListener('change', this.handleFileUpload.bind(this));
         this.nextBtn.addEventListener('click', this.handleNext.bind(this));
         this.newSequenceBtn.addEventListener('click', this.startNewSequence.bind(this));
+
+        // Load data.txt automatically
+        this.loadDataFile();
     }
     
     parseLine(line) {
@@ -36,18 +37,19 @@ class QuestionSequences {
         return [category, questions];
     }
     
-    async handleFileUpload(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-        
+    async loadDataFile() {
         try {
-            const text = await file.text();
+            const response = await fetch('data.txt');
+            if (!response.ok) {
+                throw new Error('Failed to load data.txt');
+            }
+            const text = await response.text();
             this.sequences = text.split('\n')
                 .map(line => this.parseLine(line))
                 .filter(sequence => sequence !== null);
             
             if (this.sequences.length === 0) {
-                alert('No valid sequences found in file!');
+                this.questionText.textContent = 'No valid sequences found in data.txt!';
                 return;
             }
             
@@ -59,7 +61,7 @@ class QuestionSequences {
             this.newSequenceBtn.disabled = false;
         } catch (error) {
             console.error('Error reading file:', error);
-            alert('Error reading file!');
+            this.questionText.textContent = 'Error loading data.txt file!';
         }
     }
     
