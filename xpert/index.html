@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Sequences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question-display {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            min-height: 100px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .progress {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        #fileInput {
+            margin-bottom: 20px;
+        }
+        .category {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Question Sequences</h1>
+        
+        <input type="file" id="fileInput" accept=".txt">
+        
+        <div class="progress">
+            Question <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span>
+        </div>
+        
+        <div class="question-display">
+            <p id="questionText">Please load a question file to begin.</p>
+        </div>
+        
+        <p class="category">Category: <span id="categoryText">-</span></p>
+        
+        <div class="controls">
+            <button id="nextBtn" disabled>Next Question</button>
+            <button id="newSequenceBtn" disabled>New Sequence</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+</body>
+</html> 
