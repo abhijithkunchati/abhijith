@@ -26,8 +26,6 @@ BiasForAction: "Give me an example of when you had to make an important decision
 
 BiasForAction: "Tell me about a time when you saw an issue that would impact your team and took a proactive approach to solve it?" "What was the issue?" "What did you do and what was the outcome?" "What did you learn from this situation?"
 
-BiasForAction: "Tell me about a time when you had to make a decision quickly but needed to gather diverse perspectives from those on your team?"
-
 CustomerObsession: "Describe a difficult interaction you had with a customer?" "How did you deal with it?" "What was the outcome?" "How would you handle it differently?"
 
 CustomerObsession: "Tell me about a time when you went above and beyond for a customer?" "Why did you do it?" "How did the customer respond?" "What was the outcome?"
